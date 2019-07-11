@@ -1,0 +1,40 @@
+passwd : changes the password.
+ls : lists files and directories
+		-a (hidden)
+		-l (details)
+vi : vi editor used to open and modify files.
+cat : used to concatenate and display files.
+mv : used to move files from source to destination folder or to rename the file.
+~ : cd ~ ( moves the terminal to the home directory)
+~ username : switches the terminal to the home directory of the given user.
+cd _ : displays and switches to the last directory.
+mkdir <dirname> : creates a directory with given name.
+rmdir :
+grep : searches substring in a file => grep "substring" file.txt
+pipe : ls -l | grep "Aug" ( output of the first command is given as input to the second command ).
+sort : sorts a file (flags => -r <reverse sorting>, +x <skips x fields> )
+
+1) shell is a program which takes input from user, runs required command and retruns back the output to the user.
+2) terminal is a window which lets us use the shell interactively, used to give input and take back output from the shell.
+3) Variables : to declare and define a variable just write var_name = value (integer of string)
+		to use the same variable precede it with a "$" sign(without quotes).
+		there are 3 types of variables i) local ii) environment iii) shell
+		variables can be used with keywords like readonly(makes the variable constant), unset(undefines the variable)
+4) special variables : $$ : tells the port number of current shell/bash.
+						$* : it stores the command line arguments( can be used as $0, $1/ or using for each loop)
+5) array variable : array_name = (val1, val2, ...)
+					access : ${array_name[index}}, to access all index at once : ${array_name[*/@]}
+6) operators : arithematic, relational, boolean, file test etc
+7) substitution ?
+8) special characters (infer different meaning when used) : * ? [ ] ' " \ $ ; & ( ) | ^ < > new-line space tab
+			when used inside double quotes they carry their special meaning.
+			to display them as it is we put a backward slash before these characters
+			or instead we can enclose the whole message inside a single quote.
+			putting a shell command inbetween backquotes (` `) executes the command. like DATE=`date` prints date when echoed.
+9) I/O redirection : by default commands take input from terminal and display the output over the terminal.
+			the output can be stored in a file using "> or >>" redirection operators.
+			">" flushes the previous data and adds the new one.
+			">>" appends the new data to the file.
+10) here document ? 
+11) functions : func_name() {commmands}, called by writing name < parameters > (parameters are accessed directly by $1, $2 etc)
+			value retured by function can be received in the next line as ret=$? then use the ret (returned value) as a variable.
